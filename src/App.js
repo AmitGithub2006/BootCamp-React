@@ -9,8 +9,17 @@ import './App.css';
 
 import ComponentA from './components/ComponentA';
 
-export const NameContext = React.createContext();
-export const AgeContext = React.createContext();
+// export const NameContext = React.createContext();
+// export const AgeContext = React.createContext();
+// export const CityContext = React.createContext();
+
+export const MyContext = React.createContext();
+
+const contextValues = {
+  name: 'Amit',
+  age: 30,
+  city: 'Delhi'
+}
 
 function App() {
   return (
@@ -22,11 +31,17 @@ function App() {
       {/* <CounterOne />
       <CounterTwo /> */}
 
-      <NameContext.Provider value={'Amit'}>
+      {/* <NameContext.Provider value={'Amit'}>
         <AgeContext.Provider value={30}>
-          <ComponentA />
+          <CityContext.Provider value={'Delhi'}>
+            <ComponentA />
+          </CityContext.Provider>
         </AgeContext.Provider>
-      </NameContext.Provider>
+      </NameContext.Provider> */}
+
+      <MyContext.Provider value={contextValues}>
+        <ComponentA />
+      </MyContext.Provider>
     </div>
   );
 }
