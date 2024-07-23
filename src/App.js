@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import ReducerOne from './components/ReducerOne';
+import ReducerTwo from './components/ReducerTwo';
 // import ClickCounter from './components/ClickCounter';
 // import HoverCounter from './components/HoverCounter';
 // import DocTitleOne from './components/DocTitleOne';
@@ -7,19 +9,19 @@ import './App.css';
 // import CounterOne from './components/CounterOne';
 // import CounterTwo from './components/CounterTwo';
 
-import ComponentA from './components/ComponentA';
+// import ComponentA from './components/ComponentA';
 
 // export const NameContext = React.createContext();
 // export const AgeContext = React.createContext();
 // export const CityContext = React.createContext();
 
-export const MyContext = React.createContext();
+// export const MyContext = React.createContext();
 
-const contextValues = {
-  name: 'Amit',
-  age: 30,
-  city: 'Delhi'
-}
+// const contextValues = {
+//   name: 'Amit',
+//   age: 30,
+//   city: 'Delhi'
+// }
 
 function App() {
   return (
@@ -39,9 +41,13 @@ function App() {
         </AgeContext.Provider>
       </NameContext.Provider> */}
 
-      <MyContext.Provider value={contextValues}>
+      {/* <MyContext.Provider value={contextValues}>
         <ComponentA />
-      </MyContext.Provider>
+      </MyContext.Provider> */}
+
+
+      {/* <ReducerOne /> */}
+      <ReducerTwo />
     </div>
   );
 }
